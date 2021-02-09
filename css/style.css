@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Be Vietnam", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: #1d1e25; }
+
+nav, section.bring, section.what {
+  margin-right: 6%;
+  margin-left: 6%; }
+
+section.simplify, footer.footer {
+  padding-right: 6%;
+  padding-left: 6%; }
+
+nav a:hover, section.bring .text-content a:hover, section.said div a:hover, section.simplify a:hover, footer.footer .contact form button:hover {
+  opacity: .7;
+  box-shadow: 0 5px 8px #f25f3a; }
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden; }
+
+nav {
+  z-index: 10;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-top: 2%; }
+  nav ul {
+    display: flex; }
+    nav ul li:not(:last-child) {
+      margin-right: 5px; }
+    nav ul a {
+      color: #1d1e25;
+      background-color: transparent;
+      transition: all .8s ease;
+      opacity: 1;
+      font-size: 14px;
+      padding: 10px 15px; }
+      nav ul a:hover {
+        color: #f25f3a; }
+  nav a {
+    color: #fafafa;
+    background-color: #f25f3a;
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: all .8s ease; }
+
+section.bring {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1; }
+  section.bring img.bg-bring {
+    position: absolute;
+    left: 650px;
+    top: -350px;
+    z-index: -1; }
+  section.bring .text-content {
+    max-width: 580px; }
+    section.bring .text-content h1 {
+      font-size: 60px; }
+    section.bring .text-content p {
+      margin: 25px 0 45px 0;
+      width: 340px;
+      color: #9095a7; }
+    section.bring .text-content a {
+      color: #fafafa;
+      background-color: #f25f3a;
+      padding: 10px 25px;
+      border-radius: 20px;
+      transition: all .8s ease; }
+
+section.what {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1; }
+  section.what .text-left {
+    width: 100%; }
+    section.what .text-left h1 {
+      font-size: 40px; }
+    section.what .text-left p {
+      width: 350px;
+      margin-top: 25px;
+      color: #9095a7; }
+  section.what .text-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; }
+    section.what .text-right .what-content {
+      display: flex; }
+      section.what .text-right .what-content span {
+        margin-right: 20px; }
+        section.what .text-right .what-content span p {
+          color: #fafafa;
+          background-color: #f25f3a;
+          padding: 5px 20px;
+          border-radius: 20px;
+          display: block; }
+      section.what .text-right .what-content h5 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 25px; }
+      section.what .text-right .what-content p {
+        color: #9095a7;
+        text-align: justify; }
+    section.what .text-right .what-content:not(:last-child) {
+      margin-bottom: 20px; }
+
+section.said {
+  position: relative;
+  margin-top: 8%; }
+  section.said img.bg-what {
+    position: absolute;
+    left: -25%;
+    top: -50%;
+    z-index: -1;
+    height: 600px;
+    width: 600px; }
+  section.said h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px; }
+  section.said div {
+    text-align: center; }
+    section.said div a {
+      color: #fafafa;
+      background-color: #f25f3a;
+      padding: 10px 25px;
+      border-radius: 20px;
+      transition: all .8s ease;
+      z-index: 1000;
+      position: relative; }
+  section.said .testimonials .testimonial-item {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    border-color: transparent;
+    position: relative; }
+    section.said .testimonials .testimonial-item:not(:first-child) {
+      margin-left: 10px; }
+    section.said .testimonials .testimonial-item h5 {
+      display: block;
+      width: 100%;
+      background-color: #f4f4f4;
+      padding: 50px 15px 20px; }
+    section.said .testimonials .testimonial-item blockquote {
+      display: block;
+      width: 100%;
+      height: 120px;
+      padding: 0 30px 30px;
+      font-style: italic;
+      background-color: #f4f4f4; }
+    section.said .testimonials .testimonial-item img {
+      width: 60px;
+      height: 60px !important;
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%); }
+
+section.simplify {
+  margin-top: 100px;
+  background-color: #f25f3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; }
+  section.simplify img.bg-what {
+    position: absolute;
+    z-index: -1; }
+  section.simplify h1 {
+    font-size: 30px;
+    max-width: 380px;
+    color: #fafafa; }
+  section.simplify a {
+    color: #f25f3a;
+    background-color: #fafafa;
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: all .8s ease;
+    z-index: 1000;
+    position: relative; }
+
+footer.footer {
+  padding: 80px;
+  background-color: #1d1e25;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  footer.footer .logo-and-sosmed, footer.footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    footer.footer .logo-and-sosmed .logo, footer.footer .contact .logo {
+      width: 140px; }
+    footer.footer .logo-and-sosmed .sosmed ul, footer.footer .contact .sosmed ul {
+      display: flex; }
+      footer.footer .logo-and-sosmed .sosmed ul li a i.fa, footer.footer .contact .sosmed ul li a i.fa {
+        margin-right: 10px;
+        font-size: 22px;
+        color: #fafafa; }
+        footer.footer .logo-and-sosmed .sosmed ul li a i.fa:hover, footer.footer .contact .sosmed ul li a i.fa:hover {
+          color: #f25f3a; }
+  footer.footer .nav ul li:not(:last-child), footer.footer .info ul li:not(:last-child) {
+    margin-bottom: 10px; }
+  footer.footer a {
+    color: #fafafa; }
+    footer.footer a:hover {
+      color: #f25f3a; }
+  footer.footer .contact {
+    text-align: right; }
+    footer.footer .contact form input {
+      border-radius: 25px;
+      padding: 15px;
+      outline: none;
+      border: none;
+      text-align: left;
+      width: 80%; }
+    footer.footer .contact form button {
+      width: 18%;
+      border-radius: 22px;
+      padding: 15px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: #f25f3a;
+      color: #fafafa;
+      transition: all .5s ease; }
+    footer.footer .contact form span#response {
+      margin-top: 5px;
+      display: block;
+      color: #f25f3a;
+      font-style: italic;
+      text-align: left; }
+    footer.footer .contact .copy {
+      color: #f4f4f4; }
+  footer.footer .errorEmail {
+    border: 2px solid #f25f3a !important;
+    color: #f25f3a; }
+
+/*# sourceMappingURL=style.css.map */

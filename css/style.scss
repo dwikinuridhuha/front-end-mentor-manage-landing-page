@@ -1,0 +1,413 @@
+$Bright-Red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Vary-Light-Gray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Be Vietnam", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: $Very-Dark-Blue;
+}
+
+%marginKiriKanan {
+  margin-right: 6%;
+  margin-left: 6%;
+}
+
+%paddingKiriKanan {
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+%heverBtn {
+  opacity: .7;
+  box-shadow: 0 5px 8px $Bright-Red;
+}
+
+@mixin btn($colorFont, $colorBg) {
+  color: $colorFont;
+  background-color: $colorBg;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: all .8s ease;
+}
+
+body {
+  background-color: $Vary-Light-Gray;
+  overflow-x: hidden;
+}
+
+// part nav
+nav {
+  @extend %marginKiriKanan;
+  z-index: 10;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-top: 2%;
+
+  ul {
+    display: flex;
+
+    li:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    a {
+      color: $Very-Dark-Blue;
+      background-color: transparent;
+      transition: all .8s ease;
+      opacity: 1;
+      font-size: 14px;
+      padding: 10px 15px;
+
+      &:hover {
+        color: #f25f3a;
+      }
+    }
+  }
+
+  a:hover {
+    @extend %heverBtn;
+  }
+
+  a {
+    @include btn($Vary-Light-Gray, $Bright-Red);
+  }
+}
+
+//nav
+
+//section brig
+section.bring {
+  margin-top: 5%;
+  @extend %marginKiriKanan;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  img.bg-bring {
+    position: absolute;
+    left: 650px;
+    top: -350px;
+    z-index: -1;
+  }
+
+  .text-content {
+    max-width: 580px;
+
+    h1 {
+      font-size: 60px
+    }
+
+    p {
+      margin: 25px 0 45px 0;
+      width: 340px;
+      color: $Dark-Grayish-Blue;
+    }
+
+    a {
+      @include btn($Vary-Light-Gray, $Bright-Red);
+
+      &:hover {
+        @extend %heverBtn;
+      }
+    }
+  }
+}
+
+//section brig
+
+//section what
+section.what {
+  margin-top: 5%;
+  @extend %marginKiriKanan;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  .text-left {
+    width: 100%;
+
+    h1 {
+
+      font-size: 40px;
+    }
+
+    p {
+      width: 350px;
+      margin-top: 25px;
+      color: $Dark-Grayish-Blue;
+    }
+  }
+
+  .text-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+
+    .what-content {
+      display: flex;
+
+      span {
+        margin-right: 20px;
+
+        p {
+          color: $Vary-Light-Gray;
+          background-color: $Bright-Red;
+          padding: 5px 20px;
+          border-radius: 20px;
+          display: block;
+        }
+      }
+
+      h5 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+
+      p {
+        color: $Dark-Grayish-Blue;
+        text-align: justify;
+      }
+    }
+
+    .what-content:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+//section what
+
+//section said
+section.said {
+  position: relative;
+  margin-top: 8%;
+
+  img.bg-what {
+    position: absolute;
+    left: -25%;
+    top: -50%;
+    z-index: -1;
+    height: 600px;
+    width: 600px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+
+  div {
+    text-align: center;
+
+    a {
+      @include btn($Vary-Light-Gray, $Bright-Red);
+      z-index: 1000;
+      position: relative;
+
+
+      &:hover {
+        @extend %heverBtn;
+      }
+    }
+  }
+
+  .testimonials {
+    .testimonial-item {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      background-color: transparent;
+      border-color: transparent;
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      h5 {
+        display: block;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding: 50px 15px 20px;
+      }
+
+      blockquote {
+        display: block;
+        width: 100%;
+        height: 120px;
+        padding: 0 30px 30px;
+        font-style: italic;
+        background-color: #f4f4f4;
+      }
+
+      img {
+        width: 60px;
+        height: 60px !important;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+//section said
+
+//section simplify
+section.simplify {
+  margin-top: 100px;
+  background-color: $Bright-Red;
+  @extend %paddingKiriKanan;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+
+  img.bg-what {
+    position: absolute;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 30px;
+    max-width: 380px;
+    color: $Vary-Light-Gray;
+  }
+
+  a {
+    @include btn($Bright-Red, $Vary-Light-Gray);
+    z-index: 1000;
+    position: relative;
+
+
+    &:hover {
+      @extend %heverBtn;
+    }
+  }
+}
+
+//section simplify
+
+//footer
+footer.footer {
+  @extend %paddingKiriKanan;
+  padding: 80px;
+  background-color: #1d1e25;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .logo-and-sosmed, .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .logo {
+      width: 140px;
+    }
+
+    .sosmed ul {
+      display: flex;
+
+      li {
+        a i.fa {
+          margin-right: 10px;
+          font-size: 22px;
+          color: $Vary-Light-Gray;
+
+          &:hover {
+            color: #f25f3a;
+          }
+        }
+      }
+    }
+  }
+
+  .nav, .info {
+    ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  a {
+    color: $Vary-Light-Gray;
+
+    &:hover {
+      color: #f25f3a;
+    }
+  }
+
+  .contact {
+    text-align: right;
+
+    form {
+      input {
+        border-radius: 25px;
+        padding: 15px;
+        outline: none;
+        border: none;
+        text-align: left;
+        width: 80%;
+      }
+
+      button {
+        width: 18%;
+        border-radius: 22px;
+        padding: 15px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: #f25f3a;
+        color: $Vary-Light-Gray;
+        transition: all .5s ease;
+
+        &:hover {
+          @extend %heverBtn;
+        }
+      }
+
+      span#response {
+        margin-top: 5px;
+        display: block;
+        color: #f25f3a;
+        font-style: italic;
+        text-align: left;
+      }
+    }
+
+    .copy {
+      color: #f4f4f4;
+    }
+  }
+
+  .errorEmail {
+    border: 2px solid #f25f3a !important;
+    color: #f25f3a;
+  }
+}
+
+//footer
